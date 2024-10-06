@@ -1,0 +1,80 @@
+body { 
+  background-color: rgb(141, 165, 165); 
+  text-align: center; 
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+} 
+
+.buttonsClass {
+  display: flex; 
+  gap: 20px; 
+  justify-content: center; 
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.modal { 
+  display: none; 
+  position: fixed; 
+  z-index: 100; 
+  left: 50%; 
+  top: 50%; 
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 10px; 
+  background-color: aliceblue; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left; 
+} 
+
+.modalButton { 
+  border: none; 
+  padding: 15px 20px; 
+  cursor: pointer;  
+  border-radius: 5px;
+  box-sizing: border-box;
+} 
+
+.modalButton.active { 
+  border: 2px solid #132538; 
+} 
+
+.modal h3 { 
+  margin: 0; 
+} 
+
+p { 
+  font-size: 12px; 
+} 
+
+.modal button { 
+  display: block; 
+  margin: 20px auto;
+}
+
+/* Фон размытия */
+body.blur {
+  overflow: hidden; /* Отключаем прокрутку при открытом модальном окне */
+}
+
+.overlay {
+  display: none; /* Скрываем по умолчанию */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+  backdrop-filter: blur(5px); /* Размытие фона */
+  z-index: 99; /* Под модальным окном */
+}
+
+#close-modal-button{
+  position: absolute; /* Фиксированное положение */
+  top: 0; /* Отступ сверху */
+  right: 20px; /* Отступ справа */
+  background: none; /* Без фона */
+  border: none; /* Без рамки */
+  cursor: pointer; /* Курсор при наведении */
+  font-size: 18px; /* Размер шрифта */
+}
